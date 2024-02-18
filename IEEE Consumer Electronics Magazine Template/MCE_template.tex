@@ -24,8 +24,7 @@
 \sptitle{Department: Head}
 \editor{Editor: Name, xxxx@email}
 
-\title{Bla bla bla\\
-Music genre classification}
+\title{Exploring CNN-based Architectures in Vietnamese Traditional Music Genre Classification}
 
 \author{First A. Author}
 \affil{First Affiliation (Without Country)}
@@ -39,7 +38,8 @@ Music genre classification}
 \markboth{Department Head}{Paper title}
 
 \begin{abstract}
-Abstract text goes here. This single paragraph ($\le$200 words) summarizes the significant aspects of the manuscript. Often it indicates whether the manuscript is a report of new work, a review or overview, or a combination of thereof. Do not cite references in the abstract. Papers must not have been published previously, must fit into the regular scope of the magazine or the theme of an open Special Section Call for Papers, and must be targeted toward the general technical reader. This magazine provides early access to all full manuscript submissions. During the editorial/production process, IEEE Publications, Editorial Services, will provide production services throughout the publication process.
+This study looks into how well Convolutional Neural Networks (CNNs) classify traditional music genres from Vietnam. Using mel-spectrograms and various feature combinations, we examine three architecture designs: DenseNet, LRCNN, and Late Fusion CNN. Two datasets are used to assess the models: a curated Vietnamese traditional music dataset and the small-scale FMA dataset.
+Based on the Vietnamese traditional music dataset, our findings show that the Late Fusion CNN architecture achieved the maximum accuracy (???\%), indicating the usefulness of merging multi-modal information for genre classification. This paper explores effective and precise CNN-based solutions for Vietnamese traditional music genre classification, which advances music information retrieval (MIR) systems.    
 \end{abstract}
 
 \maketitle
@@ -47,9 +47,21 @@ Abstract text goes here. This single paragraph ($\le$200 words) summarizes the s
 \enlargethispage{10pt}
 
 \chapterinitial{The introduction} should provide background information (including relevant references) and should indicate the purpose of the manuscript. Cite relevant work by others, including research outside your company. Place your work in perspective by referring to other research papers. Inclusion of statements at the end of the introduction regarding the organization of the manuscript can be helpful to the reader.
+A key component of music information retrieval (MIR) systems is music genre classification, which makes it possible for users to browse, search, and recommend music with ease. Because Convolutional Neural Networks (CNNs) can learn highly discriminative features from audio spectrograms, they have become excellent tools for automatic music genre classification.
+Nevertheless, the majority of previous study ignores the unique opportunities and difficulties that Vietnamese traditional music presents in favor of Western music genres. Vietnamese music is characterized by a wide range of instruments, styles, and regional variances, which frequently complicates the definition of genres. By examining how several CNN architectures perform for the genre classification of Vietnamese traditional music, this article seeks to close this gap. Three intriguing architectures are compared:
 
-This document is a template for \LaTeX. If you are reading a paper or PDF version of this document, please download the electronic file, \textit{MCE\_template.tex}, from the IEEE Web site at \href{http://www.ieee.org/authortools/}{http://www.ieee.org/authortools/} so you can use it to prepare your manuscript. If you would prefer to use \LaTeX, download IEEE's \LaTeX\ style and sample files from the same Web page. You can also explore\break using the \href{https://www.overleaf.com/blog/278-how-to-use-overleaf-with-ieee-collabratec-your-quick-guide-to-getting-started}{Overleaf} editor. Please reffer the \textit{IEEEtran\_HOWTO.pdf} is the complete guide of \LaTeX\ for manuscript preparation included with this\break stuff.
+\begin{itemize}
+\item DenseNet: By encouraging feature reuse and information flow, a dense connection pattern may increase classification accuracy.
+\item LRCNN: This architecture, which could be advantageous for genres with unique rhythmic patterns, combines Long Short-Term Memory (LSTM) networks to capture temporal correlations within spectrograms.
+\item Late Fusion CNN: In order to potentially increase discriminating, this method combines the independent predictions of several spectrograms that represent various musical qualities (such as mel and chroma).
+\end{itemize}
 
+We use two datasets to assess these designs' performance:
+
+\begin{itemize}
+\item FMA: A publicly accessible, small-scale dataset with a variety of musical genres.
+\item Vietnamese Traditional Music Dataset: This dataset, which includes a variety of Vietnamese traditional music genres, was carefully selected and assembled for this study.
+\end{itemize}
 
 \section{SECTIONS}
 
